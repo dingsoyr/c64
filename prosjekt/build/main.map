@@ -1,19 +1,19 @@
 Modules list:
 -------------
-main.c.27828.0.o:
-    CODE              Offs=000000  Size=0003C6  Align=00001  Fill=0000
+main.c.28540.0.o:
+    CODE              Offs=000000  Size=0003C9  Align=00001  Fill=0000
     RODATA            Offs=000000  Size=000106  Align=00001  Fill=0000
     BSS               Offs=000000  Size=00000C  Align=00001  Fill=0000
     DATA              Offs=000000  Size=000001  Align=00001  Fill=0000
-sid_audio.c.27828.1.o:
-    CODE              Offs=0003C6  Size=000064  Align=00001  Fill=0000
+sid_audio.c.28540.1.o:
+    CODE              Offs=0003C9  Size=00009C  Align=00001  Fill=0000
     RODATA            Offs=000106  Size=000008  Align=00001  Fill=0000
     BSS               Offs=00000C  Size=000002  Align=00001  Fill=0000
-    DATA              Offs=000001  Size=000002  Align=00001  Fill=0000
-gfx_helpers.c.27828.2.o:
-    CODE              Offs=00042A  Size=000345  Align=00001  Fill=0000
+    DATA              Offs=000001  Size=000003  Align=00001  Fill=0000
+gfx_helpers.c.28540.2.o:
+    CODE              Offs=000465  Size=000345  Align=00001  Fill=0000
     BSS               Offs=00000E  Size=000017  Align=00001  Fill=0000
-    DATA              Offs=000003  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=000004  Size=000001  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(_cursor.o):
     BSS               Offs=000025  Size=000001  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(_hextab.o):
@@ -23,53 +23,53 @@ C:\Prosjekt\c64\cc65\lib/c64.lib(_longminstr.o):
 C:\Prosjekt\c64\cc65\lib/c64.lib(_oserror.o):
     BSS               Offs=000026  Size=000001  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(_printf.o):
-    CODE              Offs=00076F  Size=0003A2  Align=00001  Fill=0000
+    CODE              Offs=0007AA  Size=0003A2  Align=00001  Fill=0000
     BSS               Offs=000027  Size=00002B  Align=00001  Fill=0000
-    DATA              Offs=000004  Size=000003  Align=00001  Fill=0000
+    DATA              Offs=000005  Size=000003  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(addysp.o):
-    CODE              Offs=000B11  Size=00000E  Align=00001  Fill=0000
+    CODE              Offs=000B4C  Size=00000E  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(axlong.o):
-    CODE              Offs=000B1F  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=000B5A  Size=00000D  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(bneg.o):
-    CODE              Offs=000B2C  Size=00000E  Align=00001  Fill=0000
+    CODE              Offs=000B67  Size=00000E  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(bordercolor.o):
-    CODE              Offs=000B3A  Size=000008  Align=00001  Fill=0000
+    CODE              Offs=000B75  Size=000008  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(c_basin.o):
-    CODE              Offs=000B42  Size=000006  Align=00001  Fill=0000
+    CODE              Offs=000B7D  Size=000006  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(c_chkin.o):
-    CODE              Offs=000B48  Size=00000A  Align=00001  Fill=0000
+    CODE              Offs=000B83  Size=00000A  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(c_close.o):
-    CODE              Offs=000B52  Size=000004  Align=00001  Fill=0000
+    CODE              Offs=000B8D  Size=000004  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(c_clrch.o):
 C:\Prosjekt\c64\cc65\lib/c64.lib(c_open.o):
-    CODE              Offs=000B56  Size=000009  Align=00001  Fill=0000
+    CODE              Offs=000B91  Size=000009  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(c_readst.o):
-    CODE              Offs=000B5F  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=000B9A  Size=000005  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(c_setlfs.o):
-    CODE              Offs=000B64  Size=00000E  Align=00001  Fill=0000
+    CODE              Offs=000B9F  Size=00000E  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(c_setnam.o):
-    CODE              Offs=000B72  Size=000013  Align=00001  Fill=0000
+    CODE              Offs=000BAD  Size=000013  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(callmain.o):
-    CODE              Offs=000B85  Size=000017  Align=00001  Fill=0000
-    DATA              Offs=000007  Size=000004  Align=00001  Fill=0000
+    CODE              Offs=000BC0  Size=000017  Align=00001  Fill=0000
+    DATA              Offs=000008  Size=000004  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(cbm_close.o):
 C:\Prosjekt\c64\cc65\lib/c64.lib(cbm_open.o):
-    CODE              Offs=000B9C  Size=000010  Align=00001  Fill=0000
+    CODE              Offs=000BD7  Size=000010  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(cgetc.o):
-    CODE              Offs=000BAC  Size=000047  Align=00001  Fill=0000
+    CODE              Offs=000BE7  Size=000047  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(clrscr.o):
 C:\Prosjekt\c64\cc65\lib/c64.lib(color.o):
-    CODE              Offs=000BF3  Size=000010  Align=00001  Fill=0000
+    CODE              Offs=000C2E  Size=000010  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(condes.o):
-    CODE              Offs=000C03  Size=00000C  Align=00001  Fill=0000
-    DATA              Offs=00000B  Size=000025  Align=00001  Fill=0000
+    CODE              Offs=000C3E  Size=00000C  Align=00001  Fill=0000
+    DATA              Offs=00000C  Size=000025  Align=00001  Fill=0000
     ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(conio.o):
 C:\Prosjekt\c64\cc65\lib/c64.lib(cprintf.o):
-    CODE              Offs=000C0F  Size=00002A  Align=00001  Fill=0000
+    CODE              Offs=000C4A  Size=00002A  Align=00001  Fill=0000
     BSS               Offs=000052  Size=000001  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(cputc.o):
-    CODE              Offs=000C39  Size=00006D  Align=00001  Fill=0000
+    CODE              Offs=000C74  Size=00006D  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(crt0.o):
     STARTUP           Offs=000000  Size=000033  Align=00001  Fill=0000
     ONCE              Offs=00000C  Size=00001A  Align=00001  Fill=0000
@@ -77,69 +77,69 @@ C:\Prosjekt\c64\cc65\lib/c64.lib(crt0.o):
 C:\Prosjekt\c64\cc65\lib/c64.lib(ctype.o):
     RODATA            Offs=00012A  Size=00008B  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(ctypemask.o):
-    CODE              Offs=000CA6  Size=00001E  Align=00001  Fill=0000
+    CODE              Offs=000CE1  Size=00001E  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(decsp3.o):
-    CODE              Offs=000CC4  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=000CFF  Size=00000D  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(decsp4.o):
-    CODE              Offs=000CD1  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=000D0C  Size=00000D  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(decsp6.o):
-    CODE              Offs=000CDE  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=000D19  Size=00000D  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(exehdr.o):
     EXEHDR            Offs=000000  Size=00000C  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(gotoxy.o):
-    CODE              Offs=000CEB  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=000D26  Size=00000D  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(incsp1.o):
-    CODE              Offs=000CF8  Size=000007  Align=00001  Fill=0000
+    CODE              Offs=000D33  Size=000007  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(incsp2.o):
-    CODE              Offs=000CFF  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=000D3A  Size=000016  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(incsp3.o):
-    CODE              Offs=000D15  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=000D50  Size=000005  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(incsp4.o):
-    CODE              Offs=000D1A  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=000D55  Size=000005  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(kbhit.o):
-    CODE              Offs=000D1F  Size=000009  Align=00001  Fill=0000
+    CODE              Offs=000D5A  Size=000009  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(kernal.o):
 C:\Prosjekt\c64\cc65\lib/c64.lib(kplot.o):
-    CODE              Offs=000D28  Size=00000B  Align=00001  Fill=0000
+    CODE              Offs=000D63  Size=00000B  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(lneg.o):
-    CODE              Offs=000D33  Size=00001E  Align=00001  Fill=0000
+    CODE              Offs=000D6E  Size=00001E  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(loadaddr.o):
     LOADADDR          Offs=000000  Size=000002  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(lpush.o):
-    CODE              Offs=000D51  Size=000021  Align=00001  Fill=0000
+    CODE              Offs=000D8C  Size=000021  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(ltoa.o):
-    CODE              Offs=000D72  Size=000095  Align=00001  Fill=0000
+    CODE              Offs=000DAD  Size=000095  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(memcpy.o):
-    CODE              Offs=000E07  Size=00003C  Align=00001  Fill=0000
+    CODE              Offs=000E42  Size=00003C  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(memset.o):
-    CODE              Offs=000E43  Size=00005D  Align=00001  Fill=0000
+    CODE              Offs=000E7E  Size=00005D  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(mul8.o):
-    CODE              Offs=000EA0  Size=00003A  Align=00001  Fill=0000
+    CODE              Offs=000EDB  Size=00003A  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(popa.o):
-    CODE              Offs=000EDA  Size=00000C  Align=00001  Fill=0000
+    CODE              Offs=000F15  Size=00000C  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(popptr1.o):
-    CODE              Offs=000EE6  Size=00000E  Align=00001  Fill=0000
+    CODE              Offs=000F21  Size=00000E  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(push1.o):
-    CODE              Offs=000EF4  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=000F2F  Size=000005  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(pusha.o):
-    CODE              Offs=000EF9  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=000F34  Size=000016  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(pushax.o):
-    CODE              Offs=000F0F  Size=00001A  Align=00001  Fill=0000
+    CODE              Offs=000F4A  Size=00001A  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(shrax1.o):
-    CODE              Offs=000F29  Size=000008  Align=00001  Fill=0000
+    CODE              Offs=000F64  Size=000008  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(staspidx.o):
-    CODE              Offs=000F31  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=000F6C  Size=000016  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(strlen.o):
-    CODE              Offs=000F47  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=000F82  Size=000016  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(strlower.o):
-    CODE              Offs=000F5D  Size=000027  Align=00001  Fill=0000
+    CODE              Offs=000F98  Size=000027  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(subeqsp.o):
-    CODE              Offs=000F84  Size=000015  Align=00001  Fill=0000
+    CODE              Offs=000FBF  Size=000015  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(vcprintf.o):
-    CODE              Offs=000F99  Size=000078  Align=00001  Fill=0000
-    DATA              Offs=000030  Size=000008  Align=00001  Fill=0000
+    CODE              Offs=000FD4  Size=000078  Align=00001  Fill=0000
+    DATA              Offs=000031  Size=000008  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(zerobss.o):
-    CODE              Offs=001011  Size=000023  Align=00001  Fill=0000
+    CODE              Offs=00104C  Size=000023  Align=00001  Fill=0000
 C:\Prosjekt\c64\cc65\lib/c64.lib(zeropage.o):
     ZEROPAGE          Offs=000000  Size=00001A  Align=00001  Fill=0000
 
@@ -152,12 +152,12 @@ ZEROPAGE              000002  00001B  00001A  00001
 LOADADDR              0007FF  000800  000002  00001
 EXEHDR                000801  00080C  00000C  00001
 STARTUP               00080D  00083F  000033  00001
-CODE                  000840  001873  001034  00001
-RODATA                001874  001A28  0001B5  00001
-DATA                  001A29  001A60  000038  00001
-INIT                  001A61  001A7C  00001C  00001
-BSS                   001A7D  001ACF  000053  00001
-ONCE                  001A7D  001AA2  000026  00001
+CODE                  000840  0018AE  00106F  00001
+RODATA                0018AF  001A63  0001B5  00001
+DATA                  001A64  001A9C  000039  00001
+INIT                  001A9D  001AB8  00001C  00001
+BSS                   001AB9  001B0B  000053  00001
+ONCE                  001AB9  001ADE  000026  00001
 
 
 Exports list by name:
@@ -166,114 +166,116 @@ BASIN                     00FFCF RLA    BSOUT                     00FFD2 RLA
 CHKIN                     00FFC6 RLA    CLOSE                     00FFC3 RLA    
 CLRCH                     00FFCC RLA    CURS_X                    0000D3 RLZ    
 CURS_Y                    0000D6 RLZ    OPEN                      00FFC0 RLA    
-PLOT                      001568 RLA    READST                    00FFB7 RLA    
+PLOT                      0015A3 RLA    READST                    00FFB7 RLA    
 SETLFS                    00FFBA RLA    SETNAM                    00FFBD RLA    
-__BSS_RUN__               001A7D RLA    __BSS_SIZE__              000053 REA    
-__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     001AA3 RLA    
-__DESTRUCTOR_COUNT__      000000 REA    __DESTRUCTOR_TABLE__      001A29 RLA    
+__BSS_RUN__               001AB9 RLA    __BSS_SIZE__              000053 REA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     001ADF RLA    
+__DESTRUCTOR_COUNT__      000000 REA    __DESTRUCTOR_TABLE__      001A64 RLA    
 __EXEHDR__                000001 REA    __HEADER_LAST__           00080D RLA    
 __HIMEM__                 00D000 REA    __LOADADDR__              000001 REA    
 __MAIN_SIZE__             00C7F3 REA    __MAIN_START__            00080D RLA    
-__ONCE_RUN__              001A7D RLA    __STACKSIZE__             000800 REA    
-__STARTUP__               000001 REA    ___bzero                  001683 RLA    
-___oserror                001AA3 RLA    __ctype                   00199E RLA    
-__ctypeidx                0019A9 RLA    __hextab                  001982 RLA    
-__longminstr              001992 RLA    __printf                  0010A0 RLA    
-_bgcolor                  00143B RLA    _bordercolor              00137A RLA    
-_cbm_close                001392 REA    _cbm_k_chkin              001388 RLA    
-_cbm_k_chrin              001382 RLA    _cbm_k_close              001392 RLA    
-_cbm_k_clrch              00FFCC REA    _cbm_k_open               001396 RLA    
-_cbm_k_readst             00139F RLA    _cbm_k_setlfs             0013A4 RLA    
-_cbm_k_setnam             0013B2 RLA    _cbm_open                 0013DC RLA    
-_cgetc                    0013EC RLA    _clrscr                   00E544 REA    
-_cprintf                  00144F RLA    _cputc                    00147E RLA    
-_init_bitmap_blank        000CBB RLA    _kbhit                    00155F RLA    
-_ltoa                     0015CA RLA    _main                     000AC7 RLA    
-_memcpy                   001647 RLA    _pulse_border_tick        000C6A RLA    
-_read_color_progress      000DC3 RLA    _read_screen_progress     000D2C RLA    
-_sid_init                 000C06 RLA    _sid_tick                 000C25 RLA    
-_strlen                   001787 RLA    _strlower                 00179D RLA    
-_textcolor                001433 RLA    _ultoa                    00160B RLA    
-_vcprintf                 001821 RLA    _wait_frames              000C79 RLA    
-_wait_video_seconds       000F80 RLA    addysp                    001352 RLA    
-axlong                    00135F RLA    axulong                   001365 RLA    
-bnega                     001370 RLA    c_sp                      000002 RLZ    
-callmain                  0013C5 RLA    ctypemaskdirect           0014EA RLA    
-cursor                    001AA2 RLA    decsp3                    001504 RLA    
-decsp4                    001511 RLA    decsp6                    00151E RLA    
-donelib                   001443 RLA    gotoxy                    00152B RLA    
-incsp1                    001538 RLA    incsp2                    001547 RLA    
-incsp3                    001555 RLA    incsp4                    00155A RLA    
-initlib                   001A7D RLA    negeax                    001573 RLA    
-plot                      0014D2 RLA    popa                      00171A RLA    
-popax                     00153F RLA    popptr1                   001726 RLA    
-ptr1                      00000A RLZ    ptr2                      00000C RLZ    
-ptr3                      00000E RLZ    ptr4                      000010 RLZ    
-push1                     001734 RLA    pusha                     00173D RLA    
-pusha0                    001751 RLA    pushax                    001753 RLA    
-pusheax                   00159A RLA    regbank                   000016 RLZ    
-shrax1                    001769 RLA    sreg                      000004 RLZ    
-staspidx                  001771 RLA    subeq0sp                  0017C4 RLA    
-tmp1                      000012 RLZ    tosumula0                 0016E0 RLA    
-zerobss                   001851 RLA    
+__ONCE_RUN__              001AB9 RLA    __STACKSIZE__             000800 REA    
+__STARTUP__               000001 REA    ___bzero                  0016BE RLA    
+___oserror                001ADF RLA    __ctype                   0019D9 RLA    
+__ctypeidx                0019E4 RLA    __hextab                  0019BD RLA    
+__longminstr              0019CD RLA    __printf                  0010DB RLA    
+_bgcolor                  001476 RLA    _bordercolor              0013B5 RLA    
+_cbm_close                0013CD REA    _cbm_k_chkin              0013C3 RLA    
+_cbm_k_chrin              0013BD RLA    _cbm_k_close              0013CD RLA    
+_cbm_k_clrch              00FFCC REA    _cbm_k_open               0013D1 RLA    
+_cbm_k_readst             0013DA RLA    _cbm_k_setlfs             0013DF RLA    
+_cbm_k_setnam             0013ED RLA    _cbm_open                 001417 RLA    
+_cgetc                    001427 RLA    _clrscr                   00E544 REA    
+_cprintf                  00148A RLA    _cputc                    0014B9 RLA    
+_init_bitmap_blank        000CF6 RLA    _kbhit                    00159A RLA    
+_ltoa                     001605 RLA    _main                     000ACA RLA    
+_memcpy                   001682 RLA    _pulse_border_tick        000CA5 RLA    
+_read_color_progress      000DFE RLA    _read_screen_progress     000D67 RLA    
+_sid_init                 000C09 RLA    _sid_pause                000C77 RLA    
+_sid_tick                 000C2D RLA    _strlen                   0017C2 RLA    
+_strlower                 0017D8 RLA    _textcolor                00146E RLA    
+_ultoa                    001646 RLA    _vcprintf                 00185C RLA    
+_wait_frames              000CB4 RLA    _wait_video_seconds       000FBB RLA    
+addysp                    00138D RLA    axlong                    00139A RLA    
+axulong                   0013A0 RLA    bnega                     0013AB RLA    
+c_sp                      000002 RLZ    callmain                  001400 RLA    
+ctypemaskdirect           001525 RLA    cursor                    001ADE RLA    
+decsp3                    00153F RLA    decsp4                    00154C RLA    
+decsp6                    001559 RLA    donelib                   00147E RLA    
+gotoxy                    001566 RLA    incsp1                    001573 RLA    
+incsp2                    001582 RLA    incsp3                    001590 RLA    
+incsp4                    001595 RLA    initlib                   001AB9 RLA    
+negeax                    0015AE RLA    plot                      00150D RLA    
+popa                      001755 RLA    popax                     00157A RLA    
+popptr1                   001761 RLA    ptr1                      00000A RLZ    
+ptr2                      00000C RLZ    ptr3                      00000E RLZ    
+ptr4                      000010 RLZ    push1                     00176F RLA    
+pusha                     001778 RLA    pusha0                    00178C RLA    
+pushax                    00178E RLA    pusheax                   0015D5 RLA    
+regbank                   000016 RLZ    shrax1                    0017A4 RLA    
+sreg                      000004 RLZ    staspidx                  0017AC RLA    
+subeq0sp                  0017FF RLA    tmp1                      000012 RLZ    
+tosumula0                 00171B RLA    zerobss                   00188C RLA    
+
 
 
 Exports list by value:
 ----------------------
-__DESTRUCTOR_COUNT__      000000 REA    __CONSTRUCTOR_COUNT__     000000 REA    
-__EXEHDR__                000001 REA    __LOADADDR__              000001 REA    
-__STARTUP__               000001 REA    c_sp                      000002 RLZ    
+__CONSTRUCTOR_COUNT__     000000 REA    __DESTRUCTOR_COUNT__      000000 REA    
+__LOADADDR__              000001 REA    __STARTUP__               000001 REA    
+__EXEHDR__                000001 REA    c_sp                      000002 RLZ    
 sreg                      000004 RLZ    ptr1                      00000A RLZ    
 ptr2                      00000C RLZ    ptr3                      00000E RLZ    
 ptr4                      000010 RLZ    tmp1                      000012 RLZ    
 regbank                   000016 RLZ    __BSS_SIZE__              000053 REA    
 CURS_X                    0000D3 RLZ    CURS_Y                    0000D6 RLZ    
 __STACKSIZE__             000800 REA    __HEADER_LAST__           00080D RLA    
-__MAIN_START__            00080D RLA    _main                     000AC7 RLA    
-_sid_init                 000C06 RLA    _sid_tick                 000C25 RLA    
-_pulse_border_tick        000C6A RLA    _wait_frames              000C79 RLA    
-_init_bitmap_blank        000CBB RLA    _read_screen_progress     000D2C RLA    
-_read_color_progress      000DC3 RLA    _wait_video_seconds       000F80 RLA    
-__printf                  0010A0 RLA    addysp                    001352 RLA    
-axlong                    00135F RLA    axulong                   001365 RLA    
-bnega                     001370 RLA    _bordercolor              00137A RLA    
-_cbm_k_chrin              001382 RLA    _cbm_k_chkin              001388 RLA    
-_cbm_k_close              001392 RLA    _cbm_close                001392 REA    
-_cbm_k_open               001396 RLA    _cbm_k_readst             00139F RLA    
-_cbm_k_setlfs             0013A4 RLA    _cbm_k_setnam             0013B2 RLA    
-callmain                  0013C5 RLA    _cbm_open                 0013DC RLA    
-_cgetc                    0013EC RLA    _textcolor                001433 RLA    
-_bgcolor                  00143B RLA    donelib                   001443 RLA    
-_cprintf                  00144F RLA    _cputc                    00147E RLA    
-plot                      0014D2 RLA    ctypemaskdirect           0014EA RLA    
-decsp3                    001504 RLA    decsp4                    001511 RLA    
-decsp6                    00151E RLA    gotoxy                    00152B RLA    
-incsp1                    001538 RLA    popax                     00153F RLA    
-incsp2                    001547 RLA    incsp3                    001555 RLA    
-incsp4                    00155A RLA    _kbhit                    00155F RLA    
-PLOT                      001568 RLA    negeax                    001573 RLA    
-pusheax                   00159A RLA    _ltoa                     0015CA RLA    
-_ultoa                    00160B RLA    _memcpy                   001647 RLA    
-___bzero                  001683 RLA    tosumula0                 0016E0 RLA    
-popa                      00171A RLA    popptr1                   001726 RLA    
-push1                     001734 RLA    pusha                     00173D RLA    
-pusha0                    001751 RLA    pushax                    001753 RLA    
-shrax1                    001769 RLA    staspidx                  001771 RLA    
-_strlen                   001787 RLA    _strlower                 00179D RLA    
-subeq0sp                  0017C4 RLA    _vcprintf                 001821 RLA    
-zerobss                   001851 RLA    __hextab                  001982 RLA    
-__longminstr              001992 RLA    __ctype                   00199E RLA    
-__ctypeidx                0019A9 RLA    __DESTRUCTOR_TABLE__      001A29 RLA    
-__ONCE_RUN__              001A7D RLA    __BSS_RUN__               001A7D RLA    
-initlib                   001A7D RLA    cursor                    001AA2 RLA    
-___oserror                001AA3 RLA    __CONSTRUCTOR_TABLE__     001AA3 RLA    
-__MAIN_SIZE__             00C7F3 REA    __HIMEM__                 00D000 REA    
-_clrscr                   00E544 REA    READST                    00FFB7 RLA    
-SETLFS                    00FFBA RLA    SETNAM                    00FFBD RLA    
-OPEN                      00FFC0 RLA    CLOSE                     00FFC3 RLA    
-CHKIN                     00FFC6 RLA    CLRCH                     00FFCC RLA    
-_cbm_k_clrch              00FFCC REA    BASIN                     00FFCF RLA    
-BSOUT                     00FFD2 RLA    
+__MAIN_START__            00080D RLA    _main                     000ACA RLA    
+_sid_init                 000C09 RLA    _sid_tick                 000C2D RLA    
+_sid_pause                000C77 RLA    _pulse_border_tick        000CA5 RLA    
+_wait_frames              000CB4 RLA    _init_bitmap_blank        000CF6 RLA    
+_read_screen_progress     000D67 RLA    _read_color_progress      000DFE RLA    
+_wait_video_seconds       000FBB RLA    __printf                  0010DB RLA    
+addysp                    00138D RLA    axlong                    00139A RLA    
+axulong                   0013A0 RLA    bnega                     0013AB RLA    
+_bordercolor              0013B5 RLA    _cbm_k_chrin              0013BD RLA    
+_cbm_k_chkin              0013C3 RLA    _cbm_k_close              0013CD RLA    
+_cbm_close                0013CD REA    _cbm_k_open               0013D1 RLA    
+_cbm_k_readst             0013DA RLA    _cbm_k_setlfs             0013DF RLA    
+_cbm_k_setnam             0013ED RLA    callmain                  001400 RLA    
+_cbm_open                 001417 RLA    _cgetc                    001427 RLA    
+_textcolor                00146E RLA    _bgcolor                  001476 RLA    
+donelib                   00147E RLA    _cprintf                  00148A RLA    
+_cputc                    0014B9 RLA    plot                      00150D RLA    
+ctypemaskdirect           001525 RLA    decsp3                    00153F RLA    
+decsp4                    00154C RLA    decsp6                    001559 RLA    
+gotoxy                    001566 RLA    incsp1                    001573 RLA    
+popax                     00157A RLA    incsp2                    001582 RLA    
+incsp3                    001590 RLA    incsp4                    001595 RLA    
+_kbhit                    00159A RLA    PLOT                      0015A3 RLA    
+negeax                    0015AE RLA    pusheax                   0015D5 RLA    
+_ltoa                     001605 RLA    _ultoa                    001646 RLA    
+_memcpy                   001682 RLA    ___bzero                  0016BE RLA    
+tosumula0                 00171B RLA    popa                      001755 RLA    
+popptr1                   001761 RLA    push1                     00176F RLA    
+pusha                     001778 RLA    pusha0                    00178C RLA    
+pushax                    00178E RLA    shrax1                    0017A4 RLA    
+staspidx                  0017AC RLA    _strlen                   0017C2 RLA    
+_strlower                 0017D8 RLA    subeq0sp                  0017FF RLA    
+_vcprintf                 00185C RLA    zerobss                   00188C RLA    
+__hextab                  0019BD RLA    __longminstr              0019CD RLA    
+__ctype                   0019D9 RLA    __ctypeidx                0019E4 RLA    
+__DESTRUCTOR_TABLE__      001A64 RLA    __ONCE_RUN__              001AB9 RLA    
+__BSS_RUN__               001AB9 RLA    initlib                   001AB9 RLA    
+cursor                    001ADE RLA    ___oserror                001ADF RLA    
+__CONSTRUCTOR_TABLE__     001ADF RLA    __MAIN_SIZE__             00C7F3 REA    
+__HIMEM__                 00D000 REA    _clrscr                   00E544 REA    
+READST                    00FFB7 RLA    SETLFS                    00FFBA RLA    
+SETNAM                    00FFBD RLA    OPEN                      00FFC0 RLA    
+CLOSE                     00FFC3 RLA    CHKIN                     00FFC6 RLA    
+CLRCH                     00FFCC RLA    _cbm_k_clrch              00FFCC REA    
+BASIN                     00FFCF RLA    BSOUT                     00FFD2 RLA    
+
 
 
 Imports list:
@@ -334,9 +336,9 @@ __ONCE_RUN__ ([linker generated]):
 __STACKSIZE__ ([linker generated]):
     [linker generated]        C:\Prosjekt\c64\cc65\cfg/c64.cfg:15
 __STARTUP__ (crt0.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:13
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:13
 ___bzero (memset.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
 ___oserror (_oserror.o):
     cbm_open.o                cbm/cbm_open.s:26
 __ctype (ctype.o):
@@ -350,74 +352,76 @@ __longminstr (_longminstr.o):
 __printf (_printf.o):
     vcprintf.o                conio/vcprintf.s:9
 _bgcolor (color.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:26
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:26
 _bordercolor (bordercolor.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:27
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:27
 _cbm_close (cbm_close.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:19
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:19
 _cbm_k_chkin (c_chkin.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:14
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:14
 _cbm_k_chrin (c_basin.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:15
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:15
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:15
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:15
 _cbm_k_close (c_close.o):
     cbm_close.o               cbm/cbm_close.s:7
 _cbm_k_clrch (c_clrch.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:16
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:16
 _cbm_k_open (c_open.o):
     cbm_open.o                cbm/cbm_open.s:25
 _cbm_k_readst (c_readst.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:16
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:17
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:16
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:17
 _cbm_k_setlfs (c_setlfs.o):
     cbm_open.o                cbm/cbm_open.s:25
 _cbm_k_setnam (c_setnam.o):
     cbm_open.o                cbm/cbm_open.s:25
 _cbm_open (cbm_open.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:18
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:18
 _cgetc (cgetc.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:24
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:24
 _clrscr (clrscr.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:20
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:20
 _cprintf (cprintf.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:23
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:23
 _cputc (cputc.o):
     vcprintf.o                conio/vcprintf.s:9
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:22
-_init_bitmap_blank (gfx_helpers.c.27828.2.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:31
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:22
+_init_bitmap_blank (gfx_helpers.c.28540.2.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:32
 _kbhit (kbhit.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:21
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:21
 _ltoa (ltoa.o):
     _printf.o                 common/_printf.s:12
-_main (main.c.27828.0.o):
+_main (main.c.28540.0.o):
     callmain.o                runtime/callmain.s:11
 _memcpy (memcpy.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:13
-_pulse_border_tick (gfx_helpers.c.27828.2.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:29
-_read_color_progress (gfx_helpers.c.27828.2.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:33
-_read_screen_progress (gfx_helpers.c.27828.2.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:32
-_sid_init (sid_audio.c.27828.1.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:28
-_sid_tick (sid_audio.c.27828.1.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:13
+_pulse_border_tick (gfx_helpers.c.28540.2.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:30
+_read_color_progress (gfx_helpers.c.28540.2.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:34
+_read_screen_progress (gfx_helpers.c.28540.2.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:33
+_sid_init (sid_audio.c.28540.1.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:28
+_sid_pause (sid_audio.c.28540.1.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:29
+_sid_tick (sid_audio.c.28540.1.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
 _strlen (strlen.o):
     _printf.o                 common/_printf.s:13
 _strlower (strlower.o):
     _printf.o                 common/_printf.s:13
 _textcolor (color.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:25
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:25
 _ultoa (ltoa.o):
     _printf.o                 common/_printf.s:12
 _vcprintf (vcprintf.o):
     cprintf.o                 conio/cprintf.s:8
-_wait_frames (gfx_helpers.c.27828.2.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:30
-_wait_video_seconds (gfx_helpers.c.27828.2.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:34
+_wait_frames (gfx_helpers.c.28540.2.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:31
+_wait_video_seconds (gfx_helpers.c.28540.2.o):
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:35
 addysp (addysp.o):
     incsp4.o                  runtime/incsp4.s:8
     incsp3.o                  runtime/incsp3.s:8
@@ -427,8 +431,8 @@ axlong (axlong.o):
 axulong (axlong.o):
     _printf.o                 common/_printf.s:11
 bnega (bneg.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
 c_sp (zeropage.o):
     decsp4.o                  runtime/decsp4.s:8
     lpush.o                   runtime/lpush.s:13
@@ -449,8 +453,8 @@ c_sp (zeropage.o):
     decsp3.o                  runtime/decsp3.s:8
     crt0.o                    /home/runner/work/cc65/cc65/asminc/zeropage.inc:11
     cprintf.o                 conio/cprintf.s:9
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:10
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:10
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:10
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:10
 callmain (callmain.o):
     crt0.o                    c64/crt0.s:9
 ctypemaskdirect (ctypemask.o):
@@ -458,7 +462,7 @@ ctypemaskdirect (ctypemask.o):
 cursor (_cursor.o):
     cgetc.o                   c64/cgetc.s:8
 decsp3 (decsp3.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
 decsp4 (decsp4.o):
     lpush.o                   runtime/lpush.s:12
 decsp6 (decsp6.o):
@@ -468,20 +472,20 @@ donelib (condes.o):
 gotoxy (gotoxy.o):
     cputc.o                   c64/cputc.s:12
 incsp1 (incsp1.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
 incsp2 (incsp2.o):
     staspidx.o                runtime/staspidx.s:8
     popptr1.o                 runtime/popptr1.s:8
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
 incsp3 (incsp3.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
 incsp4 (incsp4.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
 initlib (condes.o):
     crt0.o                    c64/crt0.s:8
 negeax (lneg.o):
@@ -516,9 +520,9 @@ ptr1 (zeropage.o):
     memset.o                  common/memset.s:20
     memcpy.o                  common/memcpy.s:15
     cprintf.o                 conio/cprintf.s:9
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:11
-    sid_audio.c.27828.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.27828.1.s:11
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:11
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:11
+    sid_audio.c.28540.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.28540.1.s:11
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:11
 ptr2 (zeropage.o):
     strlower.o                common/strlower.s:13
     ltoa.o                    common/ltoa.s:11
@@ -537,12 +541,12 @@ ptr4 (zeropage.o):
 push1 (push1.o):
     _printf.o                 common/_printf.s:11
 pusha (pusha.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
 pusha0 (pushax.o):
     push1.o                   runtime/push1.s:8
 pushax (pushax.o):
@@ -550,20 +554,20 @@ pushax (pushax.o):
     _printf.o                 common/_printf.s:11
     vcprintf.o                conio/vcprintf.s:8
     cprintf.o                 conio/cprintf.s:8
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
 pusheax (lpush.o):
     _printf.o                 common/_printf.s:11
 regbank (zeropage.o):
     _printf.o                 /home/runner/work/cc65/cc65/asminc/zeropage.inc:14
 shrax1 (shrax1.o):
-    main.c.27828.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.27828.0.s:604
+    main.c.28540.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.28540.0.s:606
 sreg (zeropage.o):
     lneg.o                    runtime/lneg.s:11
     ltoa.o                    common/ltoa.s:11
@@ -571,9 +575,9 @@ sreg (zeropage.o):
     axlong.o                  runtime/axlong.s:9
     _printf.o                 /home/runner/work/cc65/cc65/asminc/zeropage.inc:11
 staspidx (staspidx.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
 subeq0sp (subeqsp.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
 tmp1 (zeropage.o):
     ltoa.o                    common/ltoa.s:11
     c_setlfs.o                cbm/c_setlfs.s:13
@@ -582,8 +586,8 @@ tmp1 (zeropage.o):
     staspidx.o                runtime/staspidx.s:9
     shrax1.o                  runtime/shrax1.s:8
 tosumula0 (mul8.o):
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
-    gfx_helpers.c.27828.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.27828.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
+    gfx_helpers.c.28540.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.28540.2.s:529
 zerobss (zerobss.o):
     crt0.o                    c64/crt0.s:9
 

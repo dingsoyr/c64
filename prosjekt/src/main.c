@@ -68,6 +68,8 @@ static unsigned char stream_load_koala_progressive(const char* name, unsigned ch
     }
 
     if (!read_bytes_pulsed(ADR_BITMAP, 8000)) { cbm_k_clrch(); cbm_close(2); return 0; }
+    /* >>> Stille når vi slår på vising og rullar nedover */
+    sid_pause();
     init_bitmap_blank(0);
     if (!read_screen_progress(frames_per_row)) { cbm_k_clrch(); cbm_close(2); return 0; }
     if (!read_color_progress(frames_per_row))  { cbm_k_clrch(); cbm_close(2); return 0; }

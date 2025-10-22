@@ -9,4 +9,10 @@ void sid_init(void);
 // Kallast av IRQ kvar frame (50 Hz)
 void sid_tick(void);
 
+// Pause/resume musikk (ikkje brukt her
+void sid_pause(void);
+
+// Resume musikk
+void sid_resume(void);
+
 #endif
