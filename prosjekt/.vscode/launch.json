@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run VICE (F5)",
+      "type": "PowerShell",
+      "request": "launch",
+      "script": "${workspaceFolder}\\build.ps1",
+      "args": [
+        "-Config", "Release",
+        "-ViceModel", "Pal"
+      ],
+      "cwd": "${workspaceFolder}",
+      "createTemporaryIntegratedConsole": true,
+      "noDebug": true,
+      "problemMatching": [],
+      "debug.internalConsoleOptions": "neverOpen"
+    }
+  ]
+}
