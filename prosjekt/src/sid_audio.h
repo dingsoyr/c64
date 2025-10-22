@@ -3,10 +3,10 @@
 
 #include <stdint.h>
 
-/* SID / AUDIO HELPERS (declarations) */
-void sid_progress_init(void);
-void sid_progress_tick(void);
-void sid_progress_shutdown(void);
-void sid_progress_mute_now(void);
+// Kall frå main ved oppstart
+void sid_init(void);
 
-#endif /* SID_AUDIO_H */
+// Kallast av IRQ kvar frame (50 Hz)
+void sid_tick(void);
+
+#endif

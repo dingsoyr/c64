@@ -32,7 +32,13 @@ if (!(Test-Path $Cl65))  { throw "Could not find cl65 on '$Cl65'." }
 if (!(Test-Path $C1541)) { throw "Could not find c1541 on '$C1541'." }
 if (!(Test-Path $Vice) -and -not $NoRun) { throw "Could not find VICE on '$Vice'." }
 
-if (!(Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out-Null }
+# --- Sørg for build-mappe og tøm innhald ---
+if (!(Test-Path $outDir)) {
+  New-Item -ItemType Directory -Path $outDir | Out-Null
+} else {
+  # Slett ALT innhald i build/, men la selve mappa stå
+  Get-ChildItem -Path $outDir -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+}
 
 # --- Output-namn ---
 $tagSuffix = if ($Tag) { "_$Tag" } else { "" }
@@ -77,12 +83,12 @@ Write-Host "Adding PRG: $outPrg -> $prgOnD"
 & $C1541 $d64 -write $outPrg $prgOnD
 
 if ($NoRun) {
-  Write-Host "Build done. Skiping VICE."
+  Write-Host "Build done. Skipping VICE."
   exit 0
 }
 
 Write-Host "=== RUN (VICE) ============================================="
-$viceArgs = @("-8",$d64,"-pal","-autostart",$outPrg)
+$viceArgs = @("-8",$d64,"-autostart",$outPrg)
 if ($ViceModel -eq "Pal")  { $viceArgs += @("-pal") } else { $viceArgs += @("-ntsc") }
 if ($Headless) { $viceArgs += @("-console","-sounddev","dummy") }
 
