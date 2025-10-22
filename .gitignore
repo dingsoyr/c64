@@ -1,0 +1,7 @@
+# Ignorer alt inni cc65 og vice
+cc65/*
+vice/*
+
+# Men behold sjølve mappene
+!cc65/.gitkeep
+!vice/.gitkeep

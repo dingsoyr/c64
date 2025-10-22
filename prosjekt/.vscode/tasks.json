@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build via PS",
+      "type": "process",
+      "command": "powershell",
+      "args": ["-ExecutionPolicy","Bypass","-File","${workspaceFolder}\\build.ps1"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Run (VICE - local)",
+      "type": "process",
+      "command": "powershell",
+      "args": ["-ExecutionPolicy","Bypass","-File","${workspaceFolder}\\build.ps1"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "dependsOn": "Build via PS"
+    }
+  ]
+}
