@@ -1,22 +1,22 @@
-# C64 prosjekt (lokale verktøy i C:\Prosjekt\c64)
+# C64 Project (local tools in C:\Project\c64)
 
-Plasser denne mappa slik:
+Place this folder here:
 ```
-C:\Prosjekt\c64\prosjekt
+C:\Prosjekt\c64
 ```
-og verktøya slik:
+and the tools like this (download the tools and extract them into these folders):
 ```
 C:\Prosjekt\c64\cc65
 C:\Prosjekt\c64\vice
 ```
 
-## Bruk
-- Opne `C:\Prosjekt\c64\prosjekt` i VS Code og trykk **F5**
-- eller: `./build.ps1`
+## Usage
+- Open `C:\Prosjekt\c64\prosjekt` i VS Code and press **F5**
+- or run: `./build.ps1`
 
-Alt er konfigurert med relative stiar, så du treng ikkje endre PATH.
+Everything is configured with relative paths, so you don’t need to modify your PATH variable.
 
-## Brukte resurssar
-Lage KOA fil frå logo: https://jpct.de/petscii-server/?route=
+## Resources used
+Create a KOA file from a logo: https://jpct.de/petscii-server/?route=
 
-Konvertere KOA fil til PRG: https://tomseditor.com/gallery/online?f=kla2prg&lang=en
+Convert KOA file to PRG: https://tomseditor.com/gallery/online?f=kla2prg&lang=en
