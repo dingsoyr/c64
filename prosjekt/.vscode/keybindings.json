@@ -2,6 +2,6 @@
   {
     "key": "f5",
     "command": "workbench.action.tasks.runTask",
-    "args": "Run (VICE - local)"
+    "args": "Run (VICE – PAL)"
   }
 ]

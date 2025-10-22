@@ -2,20 +2,73 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build via PS",
+      "label": "Build (Release)",
       "type": "process",
       "command": "powershell",
-      "args": ["-ExecutionPolicy","Bypass","-File","${workspaceFolder}\\build.ps1"],
+      "args": [
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}\\build.ps1",
+        "-Config", "Release",
+        "-NoRun"
+      ],
       "options": { "cwd": "${workspaceFolder}" },
-      "group": { "kind": "build", "isDefault": true }
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
     },
     {
-      "label": "Run (VICE - local)",
+      "label": "Build (Debug)",
       "type": "process",
       "command": "powershell",
-      "args": ["-ExecutionPolicy","Bypass","-File","${workspaceFolder}\\build.ps1"],
+      "args": [
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}\\build.ps1",
+        "-Config", "Debug",
+        "-NoRun"
+      ],
       "options": { "cwd": "${workspaceFolder}" },
-      "dependsOn": "Build via PS"
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run (VICE – PAL)",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}\\build.ps1",
+        "-Config", "Release",
+        "-ViceModel", "Pal"
+        // Merk: IKKJE -NoRun her
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run (VICE – NTSC)",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}\\build.ps1",
+        "-Config", "Release",
+        "-ViceModel", "Ntsc"
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run (Headless/CI)",
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy", "Bypass",
+        "-File", "${workspaceFolder}\\build.ps1",
+        "-Config", "Release",
+        "-ViceModel", "Pal",
+        "-Headless"
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
     }
   ]
 }
