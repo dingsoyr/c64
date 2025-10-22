@@ -12,7 +12,9 @@ $Cl65  = (Resolve-Path $Cl65).Path
 $Vice  = (Resolve-Path $Vice).Path
 $C1541 = (Resolve-Path $C1541).Path
 
-$src     = "src\main.c"
+$srcMain = "src\main.c"
+$srcAudio = "src\sid_audio.c"
+$srcGfx = "src\gfx_helpers.c"
 $outDir  = "build"
 $outPrg  = Join-Path $outDir "main.prg"
 $d64     = Join-Path $outDir "vreid.d64"
@@ -24,7 +26,7 @@ if (!(Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out-Nul
 
 # Bygg PRG
 Write-Host "Using cl65: $Cl65"
-& $Cl65 -t c64 -Oirs -o $outPrg $src
+& $Cl65 -t c64 -Oirs -o $outPrg $srcMain $srcAudio $srcGfx
 
 # Lag nytt d64-image (rett syntaks!)
 if (Test-Path $d64) { Remove-Item $d64 -Force }
