@@ -1,16 +1,16 @@
 Modules list:
 -------------
-main.c.19240.0.o:
+main.c.25884.0.o:
     CODE              Offs=000000  Size=0006EC  Align=00001  Fill=0000
     RODATA            Offs=000000  Size=00010F  Align=00001  Fill=0000
     BSS               Offs=000000  Size=000041  Align=00001  Fill=0000
     DATA              Offs=000000  Size=000006  Align=00001  Fill=0000
-sid_audio.c.19240.1.o:
+sid_audio.c.25884.1.o:
     CODE              Offs=0006EC  Size=000113  Align=00001  Fill=0000
     RODATA            Offs=00010F  Size=000010  Align=00001  Fill=0000
     BSS               Offs=000041  Size=000002  Align=00001  Fill=0000
     DATA              Offs=000006  Size=000006  Align=00001  Fill=0000
-gfx_helpers.c.19240.2.o:
+gfx_helpers.c.25884.2.o:
     CODE              Offs=0007FF  Size=000439  Align=00001  Fill=0000
     BSS               Offs=000043  Size=000021  Align=00001  Fill=0000
     DATA              Offs=00000C  Size=000001  Align=00001  Fill=0000
@@ -388,9 +388,9 @@ __ONCE_RUN__ ([linker generated]):
 __STACKSIZE__ ([linker generated]):
     [linker generated]        C:\Prosjekt\c64\cc65\cfg/c64.cfg:15
 __STARTUP__ (crt0.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:13
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:13
 ___bzero (memset.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
 ___oserror (_oserror.o):
     cbm_open.o                cbm/cbm_open.s:26
 __ctype (ctype.o):
@@ -404,77 +404,77 @@ __longminstr (_longminstr.o):
 __printf (_printf.o):
     vcprintf.o                conio/vcprintf.s:9
 _bgcolor (color.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:27
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:27
 _bordercolor (bordercolor.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:28
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:28
 _cbm_close (cbm_close.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:19
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:19
 _cbm_k_chkin (c_chkin.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:14
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:14
 _cbm_k_chrin (c_basin.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:15
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:15
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:15
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:15
 _cbm_k_close (c_close.o):
     cbm_close.o               cbm/cbm_close.s:7
 _cbm_k_clrch (c_clrch.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:16
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:16
 _cbm_k_open (c_open.o):
     cbm_open.o                cbm/cbm_open.s:25
 _cbm_k_readst (c_readst.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:16
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:17
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:16
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:17
 _cbm_k_setlfs (c_setlfs.o):
     cbm_open.o                cbm/cbm_open.s:25
 _cbm_k_setnam (c_setnam.o):
     cbm_open.o                cbm/cbm_open.s:25
 _cbm_open (cbm_open.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:18
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:18
 _cgetc (cgetc.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:25
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:25
 _clrscr (clrscr.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:20
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:20
 _cprintf (cprintf.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:24
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:24
 _cputc (cputc.o):
     vcprintf.o                conio/vcprintf.s:9
     cputs.o                   conio/cputs.s:9
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:22
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:22
 _cputsxy (cputs.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:23
-_init_bitmap_blank (gfx_helpers.c.19240.2.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:32
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:23
+_init_bitmap_blank (gfx_helpers.c.25884.2.o):
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:32
 _kbhit (kbhit.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:21
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:21
 _ltoa (ltoa.o):
     _printf.o                 common/_printf.s:12
-_main (main.c.19240.0.o):
+_main (main.c.25884.0.o):
     callmain.o                runtime/callmain.s:11
 _memcpy (memcpy.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:13
-_pulse_border_tick (gfx_helpers.c.19240.2.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:30
-_read_color_progress (gfx_helpers.c.19240.2.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:34
-_read_screen_progress (gfx_helpers.c.19240.2.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:33
-_sid_init (sid_audio.c.19240.1.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:29
-_sid_tick (sid_audio.c.19240.1.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:13
+_pulse_border_tick (gfx_helpers.c.25884.2.o):
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:30
+_read_color_progress (gfx_helpers.c.25884.2.o):
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:34
+_read_screen_progress (gfx_helpers.c.25884.2.o):
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:33
+_sid_init (sid_audio.c.25884.1.o):
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:29
+_sid_tick (sid_audio.c.25884.1.o):
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 _strlen (strlen.o):
     _printf.o                 common/_printf.s:13
 _strlower (strlower.o):
     _printf.o                 common/_printf.s:13
 _textcolor (color.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:26
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:26
 _ultoa (ltoa.o):
     _printf.o                 common/_printf.s:12
 _vcprintf (vcprintf.o):
     cprintf.o                 conio/cprintf.s:8
-_wait_frames (gfx_helpers.c.19240.2.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:31
-_wait_video_seconds (gfx_helpers.c.19240.2.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:35
+_wait_frames (gfx_helpers.c.25884.2.o):
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:31
+_wait_video_seconds (gfx_helpers.c.25884.2.o):
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:35
 addysp (addysp.o):
     incsp7.o                  runtime/incsp7.s:8
     incsp4.o                  runtime/incsp4.s:8
@@ -485,20 +485,20 @@ addysp1 (addysp.o):
     lmul.o                    runtime/lmul.s:9
     ladd.o                    runtime/ladd.s:8
 asrax1 (asrax1.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 axlong (axlong.o):
     _printf.o                 common/_printf.s:11
 axulong (axlong.o):
     _printf.o                 common/_printf.s:11
 bnega (bneg.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 booleq (makebool.o):
-    sid_audio.c.19240.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.19240.1.s:260
+    sid_audio.c.25884.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.25884.1.s:260
 boolugt (makebool.o):
     lugt.o                    runtime/lugt.s:8
 boolult (makebool.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 c_sp (zeropage.o):
     lcmp.o                    runtime/lcmp.s:10
     decsp6.o                  runtime/decsp6.s:8
@@ -526,9 +526,9 @@ c_sp (zeropage.o):
     decsp2.o                  runtime/decsp2.s:8
     crt0.o                    /home/runner/work/cc65/cc65/asminc/zeropage.inc:11
     cprintf.o                 conio/cprintf.s:9
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:10
-    sid_audio.c.19240.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.19240.1.s:10
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:10
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:10
+    sid_audio.c.25884.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.25884.1.s:10
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:10
 callmain (callmain.o):
     crt0.o                    c64/crt0.s:9
 ctypemaskdirect (ctypemask.o):
@@ -536,9 +536,9 @@ ctypemaskdirect (ctypemask.o):
 cursor (_cursor.o):
     cgetc.o                   c64/cgetc.s:8
 decsp2 (decsp2.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 decsp3 (decsp3.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 decsp4 (decsp4.o):
     lpush.o                   runtime/lpush.s:12
 decsp6 (decsp6.o):
@@ -549,28 +549,28 @@ gotoxy (gotoxy.o):
     cputs.o                   conio/cputs.s:9
     cputc.o                   c64/cputc.s:12
 incsp1 (incsp1.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
 incsp2 (incsp2.o):
     staspidx.o                runtime/staspidx.s:8
     popptr1.o                 runtime/popptr1.s:8
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    sid_audio.c.19240.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.19240.1.s:260
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    sid_audio.c.25884.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.25884.1.s:260
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 incsp3 (incsp3.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 incsp4 (incsp4.o):
     lcmp.o                    runtime/lcmp.s:9
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 incsp7 (incsp7.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
 initlib (condes.o):
     crt0.o                    c64/crt0.s:8
 negeax (lneg.o):
@@ -612,9 +612,9 @@ ptr1 (zeropage.o):
     lmul.o                    runtime/lmul.s:10
     cputs.o                   conio/cputs.s:10
     cprintf.o                 conio/cprintf.s:9
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:11
-    sid_audio.c.19240.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.19240.1.s:11
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:11
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:11
+    sid_audio.c.25884.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.25884.1.s:11
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:11
 ptr2 (zeropage.o):
     strlower.o                common/strlower.s:13
     ltoa.o                    common/ltoa.s:11
@@ -638,53 +638,53 @@ ptr4 (zeropage.o):
     ludiv.o                   runtime/ludiv.s:10
     lmul.o                    runtime/lmul.s:10
 push0ax (lpush.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 push1 (push1.o):
     _printf.o                 common/_printf.s:11
 pusha (pusha.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 pusha0 (pushax.o):
     push1.o                   runtime/push1.s:8
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
 pushax (pushax.o):
     callmain.o                runtime/callmain.s:11
     _printf.o                 common/_printf.s:11
     vcprintf.o                conio/vcprintf.s:8
     cprintf.o                 conio/cprintf.s:8
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    sid_audio.c.19240.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.19240.1.s:260
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    sid_audio.c.25884.1.o     C:\Prosjekt\c64\prosjekt\build\sid_audio.c.25884.1.s:260
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 pusheax (lpush.o):
     _printf.o                 common/_printf.s:11
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 pushw0sp (pushwsp.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 pushwysp (pushwsp.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 regbank (zeropage.o):
     _printf.o                 /home/runner/work/cc65/cc65/asminc/zeropage.inc:14
 regsave (zeropage.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:10
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:10
 shrax1 (shrax1.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 sreg (zeropage.o):
     lneg.o                    runtime/lneg.s:11
     ltoa.o                    common/ltoa.s:11
@@ -697,17 +697,17 @@ sreg (zeropage.o):
     lpush.o                   runtime/lpush.s:13
     lmul.o                    runtime/lmul.s:10
     ladd.o                    runtime/ladd.s:9
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:10
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:10
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:10
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:10
 staspidx (staspidx.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 stax0sp (staxsp.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 staxysp (staxsp.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 subeq0sp (subeqsp.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
 tmp1 (zeropage.o):
     ltoa.o                    common/ltoa.s:11
     c_setlfs.o                cbm/c_setlfs.s:13
@@ -717,7 +717,7 @@ tmp1 (zeropage.o):
     shrax1.o                  runtime/shrax1.s:8
     ladd.o                    runtime/ladd.s:9
     asrax1.o                  runtime/asrax1.s:8
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:11
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:11
 tmp2 (zeropage.o):
     lmul.o                    runtime/lmul.s:10
 tmp3 (zeropage.o):
@@ -727,25 +727,25 @@ tmp4 (zeropage.o):
     ludiv.o                   runtime/ludiv.s:10
     lmul.o                    runtime/lmul.s:10
 tosadd0ax (ladd.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 toslcmp (lcmp.o):
     lugt.o                    runtime/lugt.s:8
 tosudiv0ax (ludiv.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 tosudiva0 (udiv.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 tosugteax (lugt.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
 tosumoda0 (umod.o):
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 tosumul0ax (lmul.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    main.c.19240.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.19240.0.s:1094
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    main.c.25884.0.o          C:\Prosjekt\c64\prosjekt\build\main.c.25884.0.s:1094
 tosumula0 (mul8.o):
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
-    gfx_helpers.c.19240.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.19240.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
+    gfx_helpers.c.25884.2.o   C:\Prosjekt\c64\prosjekt\build\gfx_helpers.c.25884.2.s:662
 udiv16 (udiv.o):
     umod.o                    runtime/umod.s:8
 zerobss (zerobss.o):

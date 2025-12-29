@@ -48,6 +48,8 @@ $d64    = Join-Path $outDir "vreid$tagSuffix.d64"
 $koaHost = Join-Path $assets "vreid_koala.koa"
 $koaOnD  = "vreid.koa"
 $prgOnD  = "main"  # filnamn på disken (utan .prg)
+$sampleHost = Join-Path $assets "vreid_sample.bin"
+$sampleOnD  = "vreid_sample.bin"
 
 # --- cc65-flagg ---
 $ccFlags = @("-t","c64")
@@ -78,6 +80,10 @@ Write-Host "Creating D64: $d64"
 if (!(Test-Path $koaHost)) { throw "Could not find asset: '$koaHost'." }
 Write-Host "Adding KOA: $koaHost -> $koaOnD"
 & $C1541 $d64 -write $koaHost $koaOnD
+
+if (!(Test-Path $sampleHost)) { throw "Could not find sample: '$sampleHost'." }
+Write-Host "Adding sample: $sampleHost -> $sampleOnD"
+& $C1541 $d64 -write $sampleHost $sampleOnD
 
 Write-Host "Adding PRG: $outPrg -> $prgOnD"
 & $C1541 $d64 -write $outPrg $prgOnD
