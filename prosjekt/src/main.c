@@ -125,6 +125,8 @@ void main(void) {
         while (1) { }
     }
 
+    sid_resume();
+
     wait_video_seconds(5);
 
     cbm_k_clrch();
