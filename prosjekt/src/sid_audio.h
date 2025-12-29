@@ -3,16 +3,13 @@
 
 #include <stdint.h>
 
-// Kall frå main ved oppstart
-void sid_init(void);
+/* Last sampledata frå disk. Returnerer 1 ved suksess */
+unsigned char sid_load_sample(const char* filename, unsigned char device);
 
-// Kallast av IRQ kvar frame (50 Hz)
-void sid_tick(void);
+/* Spel av sampledataen (blokkerande). Ignorerer om ingen sample er lasta */
+void sid_play_sample(void);
 
-// Pause/resume musikk (ikkje brukt her
-void sid_pause(void);
-
-// Resume musikk
-void sid_resume(void);
+/* Hjelp til feilsøking: storleiken på sist lasta sample i byte */
+unsigned int sid_sample_size(void);
 
 #endif

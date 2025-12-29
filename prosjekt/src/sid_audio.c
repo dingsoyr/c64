@@ -1,185 +1,152 @@
 #include "sid_audio.h"
 
-/* --------------------------------------------------------------------------
-   SID register (voice 1) og kontrollbitar
-   -------------------------------------------------------------------------- */
-#define SID_BASE         0xD400
-#define SID_V1_FREQ_LO (*(volatile unsigned char*)(SID_BASE + 0x00))
-#define SID_V1_FREQ_HI (*(volatile unsigned char*)(SID_BASE + 0x01))
-#define SID_V1_PW_LO   (*(volatile unsigned char*)(SID_BASE + 0x02))
-#define SID_V1_PW_HI   (*(volatile unsigned char*)(SID_BASE + 0x03))
-#define SID_V1_CTRL    (*(volatile unsigned char*)(SID_BASE + 0x04))
-#define SID_V1_AD      (*(volatile unsigned char*)(SID_BASE + 0x05))
-#define SID_V1_SR      (*(volatile unsigned char*)(SID_BASE + 0x06))
-#define SID_MASTER_VOL (*(volatile unsigned char*)(SID_BASE + 0x18))
+#include <cbm.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
 
-/* CTRL-bitar */
-#define CTRL_GATE   0x01
-#define CTRL_TRI    0x10
-#define CTRL_SAW    0x20
-#define CTRL_PULSE  0x40
-#define CTRL_NOISE  0x80
+/* SID master volum-register (bit 0-3 = volum) */
+#define SID_MASTER_VOL (*(volatile unsigned char*)0xD418)
 
-/* Kor mange gonger vi skal forlenge kvar notelengd.
-    1 = original fart, 2 = 2x lengre (halv fart), 3 = 3x lengre, osv. */
-static unsigned char tempo_mult = 3;
+/* CIA1 Timer A register */
+#define CIA1_TA_LO (*(volatile unsigned char*)0xDC04)
+#define CIA1_TA_HI (*(volatile unsigned char*)0xDC05)
+#define CIA1_ICR   (*(volatile unsigned char*)0xDC0D)
+#define CIA1_CRA   (*(volatile unsigned char*)0xDC0E)
 
-/* Fast note- og gap-lengd (i frames før tempo_mult blir brukt) */
-#define NOTE_LENGTH_FRAMES 16
-#define NOTE_GAP_FRAMES     4
+/* 985248 Hz / 6000 ≈ 164.2 -> bruk 164 for ~6 kHz sample-rate */
+#define SAMPLE_TIMER_RELOAD 164u
 
-/* PAL master clock ~985248 Hz (vi brukar ferdigrekna toneord nedanfor) */
+static unsigned char* sample_bytes = 0;
+static unsigned int   sample_size  = 0;
 
-/* --------------------------------------------------------------------------
-   Melodi
-    - Verdiane i 'melody_words' er 16-bit SID-frekvensord for PAL.
-    - 0 = pause (gate off).
-   -------------------------------------------------------------------------- */
-
-/* Enkle tonar (C4, E4, G4, C5) for PAL, typiske verdier:
-   C4 ≈ 0x0456, E4 ≈ 0x04A9, G4 ≈ 0x050C, C5 ≈ 0x058A */
-static const unsigned short melody_words[] = {
-    0x0456, /* C4 */
-    0x0471, /* D4 */
-    0x04A9, /* E4 */
-    0x04C7, /* F4 */
-    0x050C, /* G4 */
-    0x0550, /* A4 */
-    0x05A7, /* H/B4 */
-    0x06B0  /* C5+12 (ekte oktav over første C) */
-};
-
-#define MELODY_COUNT (sizeof(melody_words) / sizeof(melody_words[0]))
-
-/* --------------------------------------------------------------------------
-   Intern tilstand
-   -------------------------------------------------------------------------- */
-static unsigned char sid_enabled = 1;     /* påverkar sid_tick() */
-static unsigned char note_idx    = 0;     /* peikar på noverande note */
-static unsigned char ticks_left  = 0;     /* frames att for aktiv note */
-static unsigned char gap_ticks   = 0;     /* små pausar for å retrigge ADSR */
-static unsigned char current_is_rest = 0; /* sporar om aktiv note er pause */
-
-/* --------------------------------------------------------------------------
-   Hjelpefunksjonar
-   -------------------------------------------------------------------------- */
-static void sid_set_freq_word(unsigned short w)
+unsigned char sid_load_sample(const char* filename, unsigned char device)
 {
-    SID_V1_FREQ_LO = (unsigned char)(w & 0xFF);
-    SID_V1_FREQ_HI = (unsigned char)(w >> 8);
-}
+    unsigned char rc;
+    unsigned int capacity = 0;
+    int byte;
 
-static void sid_gate_on(void)
-{
-    /* Trygg og tydeleg lead-lyd */
-    SID_V1_CTRL = (unsigned char)(CTRL_SAW | CTRL_GATE);
-}
-
-static void sid_gate_off(void)
-{
-    /* Gate av, men lat SAW stå på (berre for pausar) */
-    SID_V1_CTRL = (unsigned char)(CTRL_SAW);
-}
-
-/* --------------------------------------------------------------------------
-   Public API
-   -------------------------------------------------------------------------- */
-void sid_init(void)
-{
-    /* C89: alle deklarasjonar fyrst */
-    /* (ingen lokale variablar nødvendig her) */
-
-    /* Mastervolum fullt (nedre nibble = volum) */
-    SID_MASTER_VOL = 0x0F; 
-
-    /* Envelope for lead: rask attack, kort release for jamn puls */
-    SID_V1_AD    = 0x28;   /* Attack=2, Decay=8 */
-    SID_V1_SR    = 0xF2;   /* Sustain=15, Release=2 */
-
-    /* Pulse width ~50% (relevant når PULSE er aktiv) */
-    SID_V1_PW_LO = 0x00;
-    SID_V1_PW_HI = 0x08;
-
-    /* Start med gate av, så første note kan “tendres” reint */
-    sid_gate_off();
-
-    /* Startposisjon i melodien */
-    note_idx   = 0;
-    ticks_left = 0;
-    gap_ticks  = 0;
-    current_is_rest = 0;
-    sid_enabled = 1;
-}
-
-void sid_tick(void)
-{
-    /* C89: deklarasjonar fyrst */
-    unsigned short w;
-
-    if (!sid_enabled) {
-        return;
+    if (sample_bytes != 0) {
+        free(sample_bytes);
+        sample_bytes = 0;
+        sample_size = 0;
     }
 
-    if (ticks_left > 0) {
-        --ticks_left;
-        if (ticks_left == 0) {
-            if (!current_is_rest) {
-                gap_ticks = NOTE_GAP_FRAMES;
-                sid_gate_off();
-            } else {
-                gap_ticks = 0;
+    rc = cbm_open(3, device, 0, (char*)filename);
+    if (rc != 0 || cbm_k_chkin(3) != 0) {
+        if (rc == 0) {
+            cbm_k_clrch();
+            cbm_close(3);
+        }
+        return 0;
+    }
+
+    /* PRG filer startar med 2 byte load-adresse – hopp over desse */
+    (void)cbm_k_chrin();
+    (void)cbm_k_chrin();
+
+    {
+        static const unsigned int report_step = 2048u;
+        unsigned int next_report = report_step;
+
+        cprintf(" LOADING SAMPLE...\r\n");
+
+        while (1) {
+            byte = cbm_k_chrin();
+            if (byte < 0) {
+                free(sample_bytes);
+                sample_bytes = 0;
+                sample_size = 0;
+                break;
+            }
+
+            if (sample_size >= capacity) {
+                unsigned int new_cap = (capacity == 0) ? 2048u : (capacity + 2048u);
+                unsigned char* new_buf = (unsigned char*)realloc(sample_bytes, new_cap);
+                if (!new_buf) {
+                    free(sample_bytes);
+                    sample_bytes = 0;
+                    sample_size = 0;
+                    break;
+                }
+                sample_bytes = new_buf;
+                capacity = new_cap;
+            }
+
+            sample_bytes[sample_size++] = (unsigned char)byte;
+
+            if (sample_size >= next_report) {
+                cprintf("  %u bytes...\r\n", sample_size);
+                next_report += report_step;
+            }
+
+            if (cbm_k_readst() & 0x40) {
+                break;  /* EOI set etter at byte er levert */
             }
         }
+    }
+
+    cbm_k_clrch();
+    cbm_close(3);
+
+    return (sample_size > 0) ? 1 : 0;
+}
+
+static void wait_timer_a_tick(void)
+{
+    while (!(CIA1_ICR & 0x01)) {
+        /* poll til Timer A underflow (ICR bit0) */
+    }
+}
+
+void sid_play_sample(void)
+{
+    unsigned int i;
+    unsigned char base_volume;
+    unsigned char old_cra;
+    unsigned char old_ta_lo;
+    unsigned char old_ta_hi;
+
+    if (sample_bytes == 0 || sample_size == 0) {
         return;
     }
 
-    if (gap_ticks > 0) {
-        --gap_ticks;
-        if (gap_ticks > 0) {
-            return;
-        }
-        /* gap ferdig – fall gjennom for å trigge neste note same frame */
+    base_volume = (unsigned char)(SID_MASTER_VOL & 0xF0);
+    old_cra = CIA1_CRA;
+    old_ta_lo = CIA1_TA_LO;
+    old_ta_hi = CIA1_TA_HI;
+
+    CIA1_CRA = (unsigned char)(old_cra & ~0x01);   /* stopp Timer A */
+    CIA1_TA_LO = (unsigned char)(SAMPLE_TIMER_RELOAD & 0xFF);
+    CIA1_TA_HI = (unsigned char)(SAMPLE_TIMER_RELOAD >> 8);
+    (void)CIA1_ICR;                                /* blank evt. flagg */
+    CIA1_CRA = 0x11;                               /* start + force load */
+
+    asm("php");
+    asm("sei");
+
+    for (i = 0; i < sample_size; ++i) {
+        unsigned char byte = sample_bytes[i];
+
+        wait_timer_a_tick();
+        SID_MASTER_VOL = (unsigned char)(base_volume | (byte >> 4));
+
+        wait_timer_a_tick();
+        SID_MASTER_VOL = (unsigned char)(base_volume | (byte & 0x0F));
     }
 
-    /* Loop melodien */
-    if (note_idx >= MELODY_COUNT) {
-        note_idx = 0;
-    }
+    asm("plp");
 
-    /* Hent note */
-    w = melody_words[note_idx];
-    current_is_rest = (unsigned char)(w == 0);
+    CIA1_CRA = (unsigned char)(old_cra & ~0x01);
+    CIA1_TA_LO = old_ta_lo;
+    CIA1_TA_HI = old_ta_hi;
+    CIA1_CRA = old_cra;
 
-    if (current_is_rest) {
-        sid_gate_off();
-        sid_set_freq_word(0);
-    } else {
-        sid_set_freq_word(w);
-        sid_gate_on();
-    }
-
-    ++note_idx;
-
-    ticks_left = (unsigned char)(NOTE_LENGTH_FRAMES * tempo_mult);
-    if (ticks_left == 0) {
-        ticks_left = 1;
-    }
+    SID_MASTER_VOL = base_volume;
 }
 
-void sid_pause(void)
+unsigned int sid_sample_size(void)
 {
-    sid_enabled = 0;
-    sid_gate_off();          /* konstante skriv */
-    SID_MASTER_VOL = 0x00;   /* volum av */
-}
-
-void sid_resume(void)
-{
-    SID_MASTER_VOL = 0x0F;   /* volum på */
-    sid_gate_off();
-    note_idx = 0;
-    ticks_left = 0;
-    gap_ticks = 0;
-    current_is_rest = 0;
-    sid_enabled = 1;
+    return sample_size;
 }

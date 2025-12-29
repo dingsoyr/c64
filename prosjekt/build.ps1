@@ -49,7 +49,7 @@ $koaHost = Join-Path $assets "vreid_koala.koa"
 $koaOnD  = "vreid.koa"
 $prgOnD  = "main"  # filnamn på disken (utan .prg)
 $sampleHost = Join-Path $assets "vreid_sample.bin"
-$sampleOnD  = "vreid_sample.bin"
+$sampleOnD  = "vreid.bin"
 
 # --- cc65-flagg ---
 $ccFlags = @("-t","c64")

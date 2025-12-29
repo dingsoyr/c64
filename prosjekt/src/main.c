@@ -21,10 +21,6 @@
 #define IRQV_LO          (*(volatile unsigned char*)0x0314)
 #define IRQV_HI          (*(volatile unsigned char*)0x0315)
 
-/* Framoverdeklarasjonar */
-static void install_irq(void);
-void irq_handler(void);   /* definert lenger nede */
-
 static unsigned char load_text_active = 0;
 static unsigned short load_text_total = 0;
 static unsigned short load_text_displayed = 0;
@@ -214,6 +210,7 @@ void main(void) {
     /* Intro */
     bordercolor(COLOR_BLACK); bgcolor(COLOR_BLACK);
     textcolor(COLOR_WHITE); clrscr();
+    clrscr();
 
     textcolor(COLOR_GRAY3);
     slowprint("\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n             VREID PRESENTS\r\n", 400);
@@ -234,11 +231,14 @@ void main(void) {
         while (1) { }
     }
 
-    /* Start musikken først etter at logoen er klar */
-    sid_init();
-    install_irq();
+    /* Last og spel av sample */
+    if (!sid_load_sample("vreid.bin", DEVNO)) {
+        cprintf(" SAMPLE LOAD FAIL.\r\n");
+        while (1) { }
+    }
+    sid_play_sample();
 
-    wait_video_seconds(5);
+    // wait_video_seconds(5);
 
     cbm_k_clrch();
     cbm_close(2);
@@ -283,47 +283,4 @@ void main(void) {
         "sta $01     \n"
         "jmp ($fffc) \n"
     );
-}
-
-/* ---------- IRQ-oppsett ---------- */
-static void install_irq(void)
-{
-    __asm__("sei");  /* disable IRQ globalt */
-
-    /* Rasterline 0, og sørg for <256-compare (bit7=0) */
-    VIC_RASTER = 0x00;
-    VIC_CTRL1 = (unsigned char)(VIC_CTRL1 & 0x7F);
-
-    /* Pek KERNAL IRQ-vektoren til vår handler */
-    IRQV_LO = (unsigned char)((unsigned)irq_handler & 0xFF);
-    IRQV_HI = (unsigned char)(((unsigned)irq_handler >> 8) & 0xFF);
-
-    /* Tøm evt. ventande IRQ-flagg og slå på raster-IRQ */
-    VIC_IRQ_FLAG   = 0xFF;
-    VIC_IRQ_ENABLE |= 0x01;   /* bit0 = raster */
-
-    __asm__("cli");  /* enable IRQ igjen */
-}
-
-/* ---------- IRQ-handler (C-funksjon med inline ASM i kroppen) ---------- */
-void irq_handler(void)
-{
-    asm("pha");
-    asm("txa");
-    asm("pha");
-    asm("tya");
-    asm("pha");
-
-    asm("jsr _sid_tick");   /* kall C-rutina di */
-
-    asm("lda #$ff");
-    asm("sta $d019");       /* kvitt raster-IRQ */
-
-    asm("pla");
-    asm("tay");
-    asm("pla");
-    asm("tax");
-    asm("pla");
-
-    asm("jmp $ea31");       /* kjed vidare til KERNAL IRQ */
 }
