@@ -22,6 +22,36 @@ void wait_frames(unsigned char frames) {
     }
 }
 
+/* Teikn ein enkel blokk-basert progress-bar i tekstmodusminnet */
+void draw_progress_bar(unsigned char row, unsigned char col, unsigned char width,
+                       unsigned short current, unsigned short total)
+{
+    unsigned char i;
+    unsigned char filled;
+    unsigned short base;
+    uint8_t* screen = (uint8_t*)0x0400;
+    unsigned long scaled;
+
+    if (width == 0) {
+        return;
+    }
+
+    if (total == 0) {
+        filled = 0;
+    } else {
+        scaled = ((unsigned long)current * (unsigned long)width) / (unsigned long)total;
+        if (scaled > width) {
+            scaled = width;
+        }
+        filled = (unsigned char)scaled;
+    }
+
+    base = (unsigned short)row * 40u + col;
+    for (i = 0; i < width; ++i) {
+        screen[base + i] = (i < filled) ? 0x2A : 0x20; /* '*' vs space */
+    }
+}
+
 /* Turn on bitmap mode, blank SCREEN/COLOR, set bg/border */
 void init_bitmap_blank(unsigned char bg)
 {

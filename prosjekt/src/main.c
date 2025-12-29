@@ -10,6 +10,9 @@
 
 #define DEVNO 8
 
+#define LOAD_TEXT_ROW 22
+#define LOAD_TEXT_TOTAL_UNITS 666
+
 /* --- VIC-II og IRQ-vektor --- */
 #define VIC_RASTER       (*(volatile unsigned char*)0xD012)
 #define VIC_CTRL1        (*(volatile unsigned char*)0xD011)
@@ -22,6 +25,110 @@
 static void install_irq(void);
 void irq_handler(void);   /* definert lenger nede */
 
+static unsigned char load_text_active = 0;
+static unsigned short load_text_total = 0;
+static unsigned short load_text_displayed = 0;
+
+static unsigned char utoa10(unsigned short value, char* dest)
+{
+    char tmp[6];
+    unsigned char len = 0;
+    unsigned char i = 0;
+
+    if (value == 0) {
+        dest[0] = '0';
+        return 1;
+    }
+
+    while (value > 0) {
+        tmp[len++] = (char)('0' + (value % 10));
+        value = (unsigned short)(value / 10);
+    }
+
+    while (len > 0) {
+        dest[i++] = tmp[--len];
+    }
+
+    return i;
+}
+
+static void loading_text_clear_row(void)
+{
+    uint8_t* screen = (uint8_t*)0x0400 + (unsigned short)LOAD_TEXT_ROW * 40u;
+    unsigned char i;
+    for (i = 0; i < 40; ++i) {
+        screen[i] = 0x20;
+    }
+}
+
+static void loading_text_render(unsigned short current)
+{
+    char msg[24];
+    unsigned char idx = 0;
+    unsigned char col;
+    const char prefix[] = "LOADING ";
+    unsigned char i;
+
+    for (i = 0; prefix[i] != 0; ++i) {
+        msg[idx++] = prefix[i];
+    }
+    idx += utoa10(current, msg + idx);
+    msg[idx++] = ' ';
+    msg[idx++] = 'O';
+    msg[idx++] = 'F';
+    msg[idx++] = ' ';
+    idx += utoa10(load_text_total, msg + idx);
+    msg[idx] = 0;
+
+    if (idx > 40) {
+        idx = 40;
+        msg[idx] = 0;
+    }
+
+    loading_text_clear_row();
+    col = (unsigned char)((40 - idx) / 2);
+    cputsxy(col, LOAD_TEXT_ROW, msg);
+}
+
+static void loading_text_start(unsigned short total_units)
+{
+    if (total_units == 0) {
+        total_units = 1;
+    }
+    load_text_total = total_units;
+    load_text_displayed = 0;
+    load_text_active = 1;
+    loading_text_render(0);
+}
+
+static void loading_text_update(unsigned short current_units)
+{
+    if (!load_text_active) {
+        return;
+    }
+
+    if (current_units > load_text_total) {
+        current_units = load_text_total;
+    }
+
+    if (current_units == load_text_displayed) {
+        return;
+    }
+
+    load_text_displayed = current_units;
+    loading_text_render(current_units);
+}
+
+static void loading_text_finish(void)
+{
+    if (load_text_active) {
+        loading_text_update(load_text_total);
+    }
+    load_text_active = 0;
+    load_text_total = 0;
+    load_text_displayed = 0;
+}
+
 /* ---------- Lesehjelp ---------- */
 static unsigned char read_bytes_pulsed(uint8_t* dst, unsigned len) {
     unsigned i;
@@ -30,7 +137,13 @@ static unsigned char read_bytes_pulsed(uint8_t* dst, unsigned len) {
         if (c < 0) return 0;
         dst[i] = (uint8_t)c;
 
-        if ((i & 0x3F) == 0) {  /* ~kvar 64. byte: litt border-pulse */
+        if (load_text_active && len != 0) {
+            unsigned long acc = (unsigned long)(i + 1) * load_text_total + (unsigned long)(len - 1);
+            unsigned short units = (unsigned short)(acc / len);
+            loading_text_update(units);
+        }
+
+        if ((i & 0x0F) == 0) {  /* pulser ca. kvar 16. byte for tydlegare indikator */
             pulse_border_tick();
         }
 
@@ -67,7 +180,9 @@ static unsigned char stream_load_koala_progressive(const char* name, unsigned ch
         }
     }
 
-    if (!read_bytes_pulsed(ADR_BITMAP, 8000)) { cbm_k_clrch(); cbm_close(2); return 0; }
+    loading_text_start(LOAD_TEXT_TOTAL_UNITS);
+    if (!read_bytes_pulsed(ADR_BITMAP, 8000)) { cbm_k_clrch(); cbm_close(2); loading_text_finish(); return 0; }
+    loading_text_finish();
     init_bitmap_blank(0);
     if (!read_screen_progress(frames_per_row)) { cbm_k_clrch(); cbm_close(2); return 0; }
     if (!read_color_progress(frames_per_row))  { cbm_k_clrch(); cbm_close(2); return 0; }

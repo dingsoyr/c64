@@ -12,6 +12,8 @@
 /* VIC / GRAPHICS HELPERS (declarations) */
 void pulse_border_tick(void);
 void wait_frames(unsigned char frames);
+void draw_progress_bar(unsigned char row, unsigned char col, unsigned char width,
+					   unsigned short current, unsigned short total);
 void init_bitmap_blank(unsigned char bg);
 unsigned char read_screen_progress(unsigned char frames_per_row);
 unsigned char read_color_progress(unsigned char frames_per_row);
