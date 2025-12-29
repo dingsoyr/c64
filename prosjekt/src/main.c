@@ -68,8 +68,6 @@ static unsigned char stream_load_koala_progressive(const char* name, unsigned ch
     }
 
     if (!read_bytes_pulsed(ADR_BITMAP, 8000)) { cbm_k_clrch(); cbm_close(2); return 0; }
-    /* >>> Stille når vi slår på vising og rullar nedover */
-    sid_pause();
     init_bitmap_blank(0);
     if (!read_screen_progress(frames_per_row)) { cbm_k_clrch(); cbm_close(2); return 0; }
     if (!read_color_progress(frames_per_row))  { cbm_k_clrch(); cbm_close(2); return 0; }
@@ -98,10 +96,6 @@ static void slowprint(const char* s, unsigned char frames_per_char)
 void main(void) {
     unsigned i;
 
-    /* Lyd: init + IRQ tidleg, så musikk speler gjennom alt */
-    sid_init();
-    install_irq();
-
     /* Intro */
     bordercolor(COLOR_BLACK); bgcolor(COLOR_BLACK);
     textcolor(COLOR_WHITE); clrscr();
@@ -125,7 +119,9 @@ void main(void) {
         while (1) { }
     }
 
-    sid_resume();
+    /* Start musikken først etter at logoen er klar */
+    sid_init();
+    install_irq();
 
     wait_video_seconds(5);
 
