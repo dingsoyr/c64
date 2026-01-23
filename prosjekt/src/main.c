@@ -1,11 +1,10 @@
-/* src/main.c – Stream loader for Koala (IRQ-basert musikk, inline-ASM i funksjon) */
+/* src/main.c – Stream loader for Koala (IRQ-basert grafikk, inline-ASM i funksjon) */
 #include <c64.h>
 #include <cbm.h>
 #include <conio.h>
 #include <string.h>
 #include <stdint.h>
 
-#include "sid_audio.h"
 #include "gfx_helpers.h"
 
 #define DEVNO 8
@@ -244,13 +243,6 @@ void main(void) {
 
     __asm__("jsr $e541");
     VIC.addr  = (VIC.addr & 0xF0) | 0x07; /* screen=$0400, charset=$1800 */
-
-    /* Last og spel av sample */
-    if (!sid_load_sample("vreid.bin", DEVNO)) {
-        cprintf(" SAMPLE LOAD FAIL.\r\n");
-        while (1) { }
-    }
-    sid_play_sample();
 
     bordercolor(COLOR_BLACK);
     bgcolor(COLOR_BLACK);
