@@ -231,14 +231,7 @@ void main(void) {
         while (1) { }
     }
 
-    /* Last og spel av sample */
-    if (!sid_load_sample("vreid.bin", DEVNO)) {
-        cprintf(" SAMPLE LOAD FAIL.\r\n");
-        while (1) { }
-    }
-    sid_play_sample();
-
-    // wait_video_seconds(5);
+    wait_video_seconds(5);
 
     cbm_k_clrch();
     cbm_close(2);
@@ -251,6 +244,13 @@ void main(void) {
 
     __asm__("jsr $e541");
     VIC.addr  = (VIC.addr & 0xF0) | 0x07; /* screen=$0400, charset=$1800 */
+
+    /* Last og spel av sample */
+    if (!sid_load_sample("vreid.bin", DEVNO)) {
+        cprintf(" SAMPLE LOAD FAIL.\r\n");
+        while (1) { }
+    }
+    sid_play_sample();
 
     bordercolor(COLOR_BLACK);
     bgcolor(COLOR_BLACK);

@@ -1,0 +1,3 @@
+ffmpeg -i input.mp3 -ss 15 -t 5 -ac 1 -ar 4000 -c:a pcm_u8 short.wav
+python3 pack_pcm.py short.wav assets/vreid_sample.bin
+python3 koala_to_prg.py assets/vreid_koala.koa assets/vreid_koala.prg
